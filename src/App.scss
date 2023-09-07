@@ -1,3 +1,7 @@
-.starter {
-  font-size: 18px;
+@import "./styles/variables";
+@import "./components/header/header.scss";
+
+html {
+  background-color: $bgc;
+  color: $c-main;
 }
