@@ -1,0 +1,49 @@
+.button {
+  &__wrapper {
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+  
+    width: 208px;
+  
+    margin: 0 auto;
+  }
+  
+  &__text {
+    position: absolute;
+    left: 19px;
+  
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 700;
+  
+    background: none;
+    border: none;
+    cursor: pointer;
+  
+    color: $c-main;
+  }
+  
+  &__ellipce {
+    background-image: url('../../images/ellipse.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 48px;
+    height: 56px;
+  }
+  
+  &__arrow {
+    position: absolute;
+    right: 0;
+  
+    background-image: url('../../images/arrow.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  
+    width: 40px;
+    height: 10px;
+  }
+}

@@ -1,7 +1,20 @@
 @import "./styles/variables";
+@import "./styles/fonts.scss";
 @import "./components/header/header.scss";
+@import "./components/slider/slider.scss";
+@import "./components/navigation/navigation.scss";
+@import "./components/footer/footer.scss";
+@import "./components/button/button.scss";
 
 html {
   background-color: $bgc;
   color: $c-main;
+}
+
+body {
+  font-family: Ubuntu, sans-serif;
+}
+
+.title {
+  font-family: 'Sensation', sans-serif;
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-
 import { Navigation } from '../navigation/Navigation';
 
-export const Header: React.FC = () => {
+export const Footer: React.FC = () => {
   return (
-    <header className="header">
+    <footer className="footer">
       <Navigation />
-    </header>
+    </footer>
   );
 };

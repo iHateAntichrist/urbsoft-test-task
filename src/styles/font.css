@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Sensation';
+  font-weight: 700;
+  src: url(/src/font/Sansation_Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Sensation';
+  font-weight: 400;
+  font-style: italic;
+  src: url(/src/font/Sansation_Italic.ttf) format('truetype');
+}
