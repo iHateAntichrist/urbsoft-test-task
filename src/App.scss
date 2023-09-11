@@ -5,6 +5,9 @@
 @import "./components/navigation/navigation.scss";
 @import "./components/footer/footer.scss";
 @import "./components/button/button.scss";
+@import "./components/catalog/catalog.scss";
+@import "./components/productCard/productCard.scss";
+@import "./components/feedback/feedback.scss";
 
 html {
   background-color: $bgc;
@@ -17,4 +20,13 @@ body {
 
 .title {
   font-family: 'Sensation', sans-serif;
+}
+
+.wrapper {
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.main {
+  margin-bottom: 238px;
 }

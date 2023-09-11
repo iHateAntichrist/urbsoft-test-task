@@ -1,0 +1,91 @@
+.card-wrapper {
+  position: relative;
+  width: 380px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 0px 15px 0px rgba(152, 136, 122, 0.50);
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    width: 380px;
+    height: 380px;
+
+    margin-bottom: 30px;
+
+    &:hover {
+      border: 3px solid rgba(152, 136, 122, 0.80);
+    }
+  }
+
+  &__image {
+    height: 300px;
+    width: 300px;
+
+    &--main {
+      width: 818px;
+      height: 380px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+  
+    margin-bottom: 30px;
+    width: 818px;
+  }
+
+  &__price {
+    font-size: 22px;
+
+    &--newprice {
+      font-size: 22px;
+    }
+
+    &--newprice-old {
+      text-decoration: line-through;
+      color: #c4c4c4;
+      font-size: 19px;
+    }
+  }
+}
+
+.discount {
+  height: 460px;
+
+  &::after {
+    content: "-20%";
+
+    position: absolute;
+    right: 0px;
+
+    padding: 13px 18px;
+    background-color: $c-broun;
+    border-top-right-radius: 8px;
+
+    color: #fff;
+    font-family: Sensation;
+  }
+}

@@ -1,0 +1,57 @@
+.catalog {
+  &__head {
+    padding-bottom: 35px;
+    border-bottom: 1px solid #98887A;
+
+    margin-bottom: 38px;
+  }
+
+  &__head-title {
+    font-family: 'Sensation';
+    font-size: 54px;
+    color: $c-main;
+
+    margin: 0;
+    padding-bottom: 25px;
+  }
+
+  &__head-subtitle {
+    font-size: 22px;
+    color: $c-grey;
+
+    margin: 0;
+  }
+
+  &__main-filters {
+    display: flex;
+    gap: 100px;
+
+    margin-bottom: 80px;
+  }
+
+  &__main-filter {
+    color: $c-main;
+  }
+
+  &__main-filterselector {
+    background: none;
+    border: none;
+    color: $c-grey;
+
+    width: 48px;
+  }
+
+  .catalog__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+
+    margin-bottom: 140px;
+  }
+  
+  .catalog__list > :nth-child(1),
+  .catalog__list > :nth-child(10) {
+    grid-column: span 2;
+  }
+  
+}
