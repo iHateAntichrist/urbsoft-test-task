@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    image: '/public/images/productlist/img1.png',
+    image: '../../../public/images/productlist/img1.png',
     title: 'Всё для кухни',
     price: null,
     isDiscount: false,
