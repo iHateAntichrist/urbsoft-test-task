@@ -8,6 +8,8 @@
 @import "./components/catalog/catalog.scss";
 @import "./components/productCard/productCard.scss";
 @import "./components/feedback/feedback.scss";
+@import "./components/usersList/usersList.scss";
+@import "./components/Loader/Loader.scss";
 
 html {
   background-color: $bgc;
@@ -28,5 +30,21 @@ body {
 }
 
 .main {
-  margin-bottom: 238px;
+  margin-bottom: 160px;
+}
+
+.fade-in-out {
+  animation: fadeInOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

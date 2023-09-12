@@ -1,6 +1,6 @@
-/* eslint-disable no-console */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useEffect, useState } from 'react';
+
 import { ProductCard } from '../productCard/ProductCart';
 import { Product } from '../../types/product';
 import productsData from '../../api/products';
@@ -11,8 +11,6 @@ export const Catalog:React.FC = () => {
   useEffect(() => {
     setProducts(productsData);
   }, []);
-
-  console.log(products);
 
   return (
     <div className="wrapper">

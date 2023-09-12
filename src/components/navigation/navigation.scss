@@ -90,6 +90,12 @@
 
   &__contacts-phonenumber {
     padding-left: 22px;
+    cursor: pointer;
+
+    &:hover {
+      color: #98887A;
+      text-decoration: underline;
+    }
   }
 
   &__contacts-bag {
@@ -97,6 +103,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    cursor: pointer;
 
     width: 23px;
     height: 30px;
@@ -109,6 +117,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    cursor: pointer;
 
     width: 23px;
     height: 30px;

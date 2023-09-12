@@ -1,11 +1,42 @@
+/* eslint-disable consistent-return */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable no-alert */
 /* eslint-disable no-console */
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Formik } from 'formik';
+import axios from 'axios';
 
 import { Button } from '../button/Button';
 
 export const Feedback: React.FC = () => {
+  const [isDataSent, setIsDataSent] = useState(false);
+
+  const submitForm = (values: any, { setSubmitting, resetForm }: any) => {
+    axios.post('http://localhost:5000/api/users', values)
+      .then(response => {
+        console.log('success', response);
+        setIsDataSent(true);
+        resetForm();
+      })
+      .catch(error => {
+        console.error('fail', error);
+        console.log(values);
+      })
+      .finally(() => {
+        setSubmitting(false);
+      });
+  };
+
+  useEffect(() => {
+    if (isDataSent) {
+      const timer = setTimeout(() => {
+        setIsDataSent(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isDataSent]);
+
   return (
     <div className="wrapper">
       <section className="feedback">
@@ -47,14 +78,9 @@ export const Feedback: React.FC = () => {
               initialValues={{
                 name: '',
                 email: '',
-                phoneNumber: '',
+                phone: '',
               }}
-              onSubmit={(values, { setSubmitting }) => {
-                setTimeout(() => {
-                  alert(JSON.stringify(values, null, 2));
-                  setSubmitting(false);
-                }, 400);
-              }}
+              onSubmit={submitForm}
             >
               {({
                 values,
@@ -87,15 +113,15 @@ export const Feedback: React.FC = () => {
                   {errors.email && touched.email && errors.email}
 
                   <input
-                    type="phoneNumber"
-                    name="phoneNumber"
+                    type="phone"
+                    name="phone"
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    value={values.phoneNumber}
+                    value={values.phone}
                     className="feedback__form-contactus-inputfield"
                     placeholder="Телефон"
                   />
-                  {errors.phoneNumber && touched.phoneNumber && errors.phoneNumber}
+                  {errors.phone && touched.phone && errors.phone}
 
                   <Button
                     text="Заказать звонок"
@@ -167,9 +193,21 @@ export const Feedback: React.FC = () => {
               </div>
             </div>
 
-            <div className="feedback__form-contacts-map"></div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.4549406636766!2d35.04952472489208!3d48.46698669804588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dbe2c2c60241bd%3A0x999c964048051b3e!2z0JzQntCh0KItQ9C40YLQuA!5e0!3m2!1sru!2sua!4v1694089462921!5m2!1sru!2sua"
+              loading="lazy"
+              title="map"
+              className="feedback__form-contacts-map"
+            >
+            </iframe>
           </div>
         </div>
+
+        {isDataSent && (
+          <div className="feedback__success-message fade-in-out">
+            Ваші дані надіслано
+          </div>
+        )}
       </section>
     </div>
   );
