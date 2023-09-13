@@ -1,9 +1,13 @@
-# React TypeScript Starter Pack
+# URBSOFT.PRO test task
+Demo: https://kyserf.github.io/urbsoft-test-task/
 
-To use this template click `Use this template`
+## Overview
 
-### Available Scripts
+This is a test task for URBSOFT.PRO.
 
-`Deploy` - available to deploy your application to gh-pages
+## Technologies Used
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+- React
+- CSS (Sass)
+- Node.js
+- Typescript
