@@ -41,7 +41,7 @@ export default [
 
   {
     id: 5,
-    image: '/images/productlist/img5.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img5.png`,
     title: 'Миксер Scarlet',
     price: '1.860 грн.',
     isDiscount: false,
@@ -51,7 +51,7 @@ export default [
 
   {
     id: 6,
-    image: '/images/productlist/img6.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img6.png`,
     title: 'Coкoвыжимaлкa Scarlet',
     price: '2.140 грн.',
     isDiscount: false,
@@ -61,7 +61,7 @@ export default [
 
   {
     id: 7,
-    image: '/images/productlist/img7.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img7.png`,
     title: 'Кофемолка Scarlet',
     price: '1.120 грн.',
     isDiscount: false,
@@ -71,7 +71,7 @@ export default [
 
   {
     id: 8,
-    image: '/images/productlist/img8.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img8.png`,
     title: 'Кофемашина Scarlet',
     price: '5.920 грн.',
     isDiscount: true,
@@ -81,7 +81,7 @@ export default [
 
   {
     id: 9,
-    image: '/images/productlist/img9.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img9.png`,
     title: 'Мясорубка Scarlet',
     price: '2.360 грн.',
     isDiscount: false,
@@ -91,7 +91,7 @@ export default [
 
   {
     id: 10,
-    image: '/images/productlist/img10.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img10.png`,
     title: 'Наборы техники',
     price: null,
     isDiscount: false,
