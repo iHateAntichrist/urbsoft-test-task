@@ -24,14 +24,24 @@ export const ProductCard: React.FC<Props> = ({
     : 'card__image-wrapper';
   const cardDiscount = isDiscount ? 'discount' : '';
 
+  const backgroundImageStyle = {
+    backgroundImage: `url(${image})`,
+  };
+
   return (
     <div className={`${cardClass} ${cardDiscount}`}>
       <div className={mainWrapperClass}>
-        <img
+        {/* <img
           src={image}
           alt={title}
           className={cardImageClass}
-        />
+        /> */}
+
+        <div
+          className={cardImageClass}
+          style={backgroundImageStyle}
+        >
+        </div>
       </div>
 
       <div className="card__wrapper">

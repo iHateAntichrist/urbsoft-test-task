@@ -11,7 +11,7 @@ export default [
 
   {
     id: 2,
-    image: '/images/productlist/img2.png',
+    image: '../../images/productlist/img2.png',
     title: 'Блендер Scarlet',
     price: '1.920 грн.',
     isDiscount: true,

@@ -8,6 +8,8 @@
   flex-direction: column;
   justify-content: space-between;
 
+  margin-bottom: 70px;
+
   &__title {
     font-size: 22px;
   }
@@ -33,9 +35,19 @@
   }
 
   &__image {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    width: 270px;
+    height: 270px;
+
     &--main {
       width: 818px;
       height: 380px;
+
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
     }
   }
 
