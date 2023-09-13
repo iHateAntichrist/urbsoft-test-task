@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    image: '../../images/productlist/img1.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img1.png`,
     title: 'Всё для кухни',
     price: null,
     isDiscount: false,
@@ -11,7 +11,7 @@ export default [
 
   {
     id: 2,
-    image: '../../images/productlist/img2.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img2.png`,
     title: 'Блендер Scarlet',
     price: '1.920 грн.',
     isDiscount: true,
@@ -21,7 +21,7 @@ export default [
 
   {
     id: 3,
-    image: '/images/productlist/img3.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img3.png`,
     title: 'Чайник Scarlet',
     price: '1.590 грн.',
     isDiscount: false,
@@ -31,7 +31,7 @@ export default [
 
   {
     id: 4,
-    image: '/images/productlist/img4.png',
+    image: `${process.env.PUBLIC_URL}/images/productlist/img4.png`,
     title: 'Тостер Scarlet',
     price: '1.120 грн.',
     isDiscount: false,
